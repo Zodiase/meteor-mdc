@@ -1,0 +1,22 @@
+{
+  "name": "meteor-mdc",
+  "version": "1.0.0",
+  "description": "Wrapper Npm package. Do not publish.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://zodiase@github.com/Zodiase/meteor-mdc.git"
+  },
+  "author": "Xingchen Hong",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Zodiase/meteor-mdc/issues"
+  },
+  "homepage": "https://github.com/Zodiase/meteor-mdc#readme",
+  "dependencies": {
+    "material-components-web": "^0.3.0"
+  }
+}
