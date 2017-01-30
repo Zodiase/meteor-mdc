@@ -29,7 +29,7 @@ addSassFile () {
 # Helper function to process a SASS file so it has the right paths.
 # $1 is the target file name, relative to the `meteor-packages/mdc-sass` folder.
 processSassFile () {
-  sed -i '' "s|@material|{zodiase:mdc-sass}|g" "${MDC_METEOR_SASS_DIR}/${1}"
+  sed -i '' "s|@import \"@material/|@import \"{zodiase:mdc-sass}/|g" "${MDC_METEOR_SASS_DIR}/${1}"
 }
 
 echo "Copying bundle file..."
