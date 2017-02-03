@@ -12,7 +12,11 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-export const name = 'mdc';
+/**
+ * This file should only be provided as a client-side asset.
+ * It serves as a shorthand for loading the stylesheet bundle with the rather tedious import path.
+ *
+ * This shorthand requires zodiase:mdc-styleonly@^0.0.2.
+ */
 
-// Export everything from MDC.
-export * from "meteor/zodiase:mdc-styleless";
+import 'meteor/zodiase:mdc-styleonly/bundle.css';
