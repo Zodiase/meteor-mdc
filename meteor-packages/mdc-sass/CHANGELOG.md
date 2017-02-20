@@ -1,5 +1,8 @@
 Change Log
 ------------------------------------------------------------------------------
+* v0.0.0_5
+    * Fix the `Cannot find module './package.json'` issue.
+    * Still not working.
 * v0.0.0_4
     * Update to MDC 0.4.0.
     * Still not working.

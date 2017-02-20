@@ -1,7 +1,7 @@
 {
   "name": "zodiase_mdc-styleless",
   "meteorPackageName": "zodiase:mdc-styleless",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "mdcVersion": "0.4.0",
   "meteorRelease": "1.4.2.3",
   "description": "Material Components for Meteor (without style)",

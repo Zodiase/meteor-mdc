@@ -35,6 +35,7 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom(config.meteorRelease);
   api.use('ecmascript');
+  api.use('zodiase:build-json@=1.0.0');
   api.use('zodiase:mdc-styleless@=' + config.jsVersion);
   api.use('zodiase:mdc-styleonly@=' + config.cssVersion);
 
@@ -42,6 +43,7 @@ Package.onUse(function(api) {
     'stylesheet.js'
   ], 'client');
 
+  api.addFiles('package.json', 'client');
   api.mainModule('main.js', 'client');
 });
 

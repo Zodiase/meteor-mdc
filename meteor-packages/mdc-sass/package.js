@@ -35,12 +35,14 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom(config.meteorRelease);
   api.use('ecmascript');
+  api.use('zodiase:build-json@=1.0.0');
   api.use('fourseven:scss@' + config.scssVersion);
 
   // Add sass files to be imported by users.
   // Has to be added to `client` platform or `fourseven:scss` won't see them.
   api.addFiles(config._sassFiles, 'client', {isImport: true});
 
+  api.addFiles('package.json', 'client');
   api.mainModule('main.js', 'client');
 });
 

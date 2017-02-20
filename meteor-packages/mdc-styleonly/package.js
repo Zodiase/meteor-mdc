@@ -35,10 +35,11 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom(config.meteorRelease);
   api.use('ecmascript');
+  api.use('zodiase:build-json@=1.0.0');
 
-  // Add the stylesheet to both the client and the server, in case someone needs server-side rendering.
-  api.addAssets(["bundle.css"], ['client', 'server']);
+  api.addAssets(["bundle.css"], 'client');
 
+  api.addFiles('package.json', 'client');
   api.mainModule('main.js', 'client');
 });
 

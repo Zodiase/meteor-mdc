@@ -35,7 +35,9 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom(config.meteorRelease);
   api.use('ecmascript');
+  api.use('zodiase:build-json@=1.0.0');
 
+  api.addFiles('package.json', 'client');
   api.mainModule('main.js', 'client');
 });
 

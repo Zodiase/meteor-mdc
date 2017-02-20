@@ -1,5 +1,7 @@
 Change Log
 ------------------------------------------------------------------------------
+* v0.0.4
+    * Fix the `Cannot find module './package.json'` issue.
 * v0.0.3
     * Uses `zodiase:mdc-styleless@0.0.2`.
     * Uses `zodiase:mdc-styleonly@0.0.3`.
