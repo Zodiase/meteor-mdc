@@ -12,4 +12,8 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-export const name = 'zodiase:mdc-styleonly';
+export {
+  meteorPackageName as name,
+  version,
+  mdcVersion
+} from './package.json';

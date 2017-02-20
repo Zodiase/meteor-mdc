@@ -1,0 +1,15 @@
+{
+  "name": "zodiase_mdc-styleless",
+  "meteorPackageName": "zodiase:mdc-styleless",
+  "version": "0.0.2",
+  "mdcVersion": "0.4.0",
+  "meteorRelease": "1.4.2.3",
+  "description": "Material Components for Meteor (without style)",
+  "git": "https://github.com/Zodiase/meteor-mdc.git",
+  "main": "package.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Xingchen Hong",
+  "license": "Apache-2.0"
+}

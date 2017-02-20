@@ -14,8 +14,9 @@
 
 // Import Tinytest from the tinytest Meteor package.
 import { Tinytest } from "meteor/tinytest";
+import mdcNpmPkgCfg from "./material-components-web.json";
 
-Tinytest.add('mdc - package name', function (test) {
+Tinytest.add('zodiase:mdc-styleless - package name', function (test) {
 
   // Verify package name.
   import { name } from "meteor/zodiase:mdc-styleless";
@@ -24,7 +25,16 @@ Tinytest.add('mdc - package name', function (test) {
 
 });
 
-Tinytest.add('mdc - bundle export', function (test) {
+Tinytest.add('zodiase:mdc-styleless - material-components-web package version', function (test) {
+
+  // The version of the `material-components-web` must match the intended mdc version.
+  import { mdcVersion } from "meteor/zodiase:mdc-styleless";
+
+  test.equal(mdcVersion, mdcNpmPkgCfg.version);
+
+});
+
+Tinytest.add('zodiase:mdc-styleless - bundle export', function (test) {
 
   // Verify package bundle.
   import mdc from "meteor/zodiase:mdc-styleless";
@@ -33,7 +43,7 @@ Tinytest.add('mdc - bundle export', function (test) {
 
 });
 
-Tinytest.add('mdc - component export', function (test) {
+Tinytest.add('zodiase:mdc-styleless - component export', function (test) {
 
   // Verify each component.
   import {

@@ -14,12 +14,22 @@
 
 // Import Tinytest from the tinytest Meteor package.
 import { Tinytest } from "meteor/tinytest";
+import mdcNpmPkgCfg from "./material-components-web.json";
 
-Tinytest.add('mdc - package name', function (test) {
+Tinytest.add('zodiase:mdc - package name', function (test) {
 
   // Verify package name.
   import { name } from "meteor/zodiase:mdc";
 
   test.equal(name, "zodiase:mdc");
+
+});
+
+Tinytest.add('zodiase:mdc - material-components-web package version', function (test) {
+
+  // The version of the `material-components-web` must match the intended mdc version.
+  import { mdcVersion } from "meteor/zodiase:mdc";
+
+  test.equal(mdcVersion, mdcNpmPkgCfg.version);
 
 });

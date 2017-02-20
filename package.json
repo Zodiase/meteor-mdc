@@ -17,6 +17,14 @@
   },
   "homepage": "https://github.com/Zodiase/meteor-mdc#readme",
   "dependencies": {
-    "material-components-web": "^0.3.0"
+    "material-components-web": "^0.4.0"
+  },
+  "devDependencies": {
+    "async": "^2.1.5",
+    "glob": "^7.1.1",
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1",
+    "replacestream": "^4.0.2",
+    "rimraf": "^2.6.0"
   }
 }

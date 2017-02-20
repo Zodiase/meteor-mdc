@@ -14,7 +14,7 @@ fourseven:scss@3.13.0
 geojson-utils@1.0.10
 id-map@1.0.9
 json@1.0.3
-local-test:zodiase:mdc-sass@0.0.0_3
+local-test:zodiase:mdc-sass@0.0.0_4
 logging@1.0.14
 meteor@1.6.0
 minimongo@1.0.17
@@ -29,4 +29,4 @@ retry@1.0.9
 tinytest@1.0.5
 tracker@1.0.15
 underscore@1.0.10
-zodiase:mdc-sass@0.0.0_3
+zodiase:mdc-sass@0.0.0_4

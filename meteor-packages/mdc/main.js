@@ -12,7 +12,11 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-export const name = 'mdc';
-
 // Export everything from MDC.
 export * from "meteor/zodiase:mdc-styleless";
+
+export {
+  meteorPackageName as name,
+  version,
+  mdcVersion
+} from './package.json';

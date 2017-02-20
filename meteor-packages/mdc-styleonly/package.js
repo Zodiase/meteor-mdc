@@ -12,19 +12,19 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-var config = {
-  "name": "zodiase:mdc-styleonly",
-  "version": "0.0.2",
-  "summary": "Material Components for Meteor (stylesheet only)",
-  "git": "https://github.com/Zodiase/meteor-mdc.git",
-  "meteorRelease": "1.4.2.3"
-};
+var loadJSON = function (fs) {
+  return function (uri) {
+    return JSON.parse(fs.readFileSync(uri));
+  };
+}(Npm.require('fs'));
+
+var config = loadJSON('./package.json');
 
 Package.describe({
-  name: config.name,
+  name: config.meteorPackageName,
   version: config.version,
   // Brief, one-line summary of the package.
-  summary: config.summary,
+  summary: config.description,
   // URL to the Git repository containing the source code for this package.
   git: config.git,
   // By default, Meteor will default to using README.md for documentation.
@@ -45,6 +45,7 @@ Package.onUse(function(api) {
 Package.onTest(function(api) {
   api.use('ecmascript');
   api.use('tinytest');
-  api.use(config.name);
+  api.use(config.meteorPackageName);
+
   api.mainModule('main-tests.js', 'client');
 });

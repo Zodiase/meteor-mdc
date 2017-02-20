@@ -12,7 +12,7 @@ ejson@1.0.13
 geojson-utils@1.0.10
 id-map@1.0.9
 json@1.0.3
-local-test:zodiase:mdc-styleonly@0.0.2
+local-test:zodiase:mdc-styleonly@0.0.3
 logging@1.0.14
 meteor@1.6.0
 minimongo@1.0.17
@@ -27,4 +27,4 @@ retry@1.0.9
 tinytest@1.0.5
 tracker@1.0.15
 underscore@1.0.10
-zodiase:mdc-styleonly@0.0.2
+zodiase:mdc-styleonly@0.0.3

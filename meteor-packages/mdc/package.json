@@ -1,0 +1,17 @@
+{
+  "name": "zodiase_mdc",
+  "meteorPackageName": "zodiase:mdc",
+  "version": "0.0.3",
+  "mdcVersion": "0.4.0",
+  "jsVersion": "0.0.2",
+  "cssVersion": "0.0.3",
+  "meteorRelease": "1.4.2.3",
+  "description": "Material Components for Meteor",
+  "git": "https://github.com/Zodiase/meteor-mdc.git",
+  "main": "package.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Xingchen Hong",
+  "license": "Apache-2.0"
+}
