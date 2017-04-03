@@ -2,6 +2,8 @@
 
 This package provides the bundled stylesheet provided by the Material Components NPM package.
 
+**Requires Meteor@1.3.3+ (ecmascript@0.4.4+)**
+
 ## Install
 
 ```Bash

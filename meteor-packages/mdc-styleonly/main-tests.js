@@ -12,24 +12,82 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-// Import Tinytest from the tinytest Meteor package.
-import { Tinytest } from "meteor/tinytest";
+import {
+  before,
+  after,
+  beforeEach,
+  afterEach,
+  describe,
+  it
+} from "meteor/practicalmeteor:mocha";
+import {
+  expect
+} from "meteor/practicalmeteor:chai";
+
 import mdcNpmPkgCfg from "./material-components-web.json";
 
-Tinytest.add('zodiase:mdc-styleonly - package name', function (test) {
+describe('zodiase:mdc-styleonly', () => {
 
-  // Verify package name.
-  import { name } from "meteor/zodiase:mdc-styleonly";
+  it('should have correct package name', () => {
 
-  test.equal(name, "zodiase:mdc-styleonly");
+    import { name } from "meteor/zodiase:mdc-styleonly";
 
-});
+    expect(name).to.equal("zodiase:mdc-styleonly");
 
-Tinytest.add('zodiase:mdc-styleonly - material-components-web package version', function (test) {
+  });
 
-  // The version of the `material-components-web` must match the intended mdc version.
-  import { mdcVersion } from "meteor/zodiase:mdc-styleonly";
+  it('should have correct MDC version', () => {
 
-  test.equal(mdcVersion, mdcNpmPkgCfg.version);
+    import { mdcVersion } from "meteor/zodiase:mdc-styleonly";
+
+    expect(mdcVersion).to.equal(mdcNpmPkgCfg.version);
+
+  });
+
+  describe('component styles', () => {
+
+    let containerElement = document.createElement('div');
+
+    before(() => {
+      document.body.appendChild(containerElement);
+    });
+    after(() => {
+      document.body.removeChild(containerElement);
+    });
+
+    beforeEach(() => {
+      // Clean up the container.
+      while (containerElement.lastChild) {
+        containerElement.removeChild(containerElement.lastChild);
+      }
+    });
+
+    it('should not have mdc-button before importing', () => {
+
+      const buttonElement = document.createElement('button');
+      buttonElement.className = 'mdc-button';
+      containerElement.appendChild(buttonElement);
+
+      const style = window.getComputedStyle(buttonElement);
+
+      expect(style.getPropertyValue('font-family')).to.not.equal('Roboto, sans-serif');
+
+    });
+
+    it('should have mdc-button after importing', () => {
+
+      import "meteor/zodiase:mdc-styleonly/bundle.css";
+
+      const buttonElement = document.createElement('button');
+      buttonElement.className = 'mdc-button';
+      containerElement.appendChild(buttonElement);
+
+      const style = window.getComputedStyle(buttonElement);
+
+      expect(style.getPropertyValue('font-family')).to.equal('Roboto, sans-serif');
+
+    });
+
+  });
 
 });

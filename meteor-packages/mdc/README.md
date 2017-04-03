@@ -6,6 +6,8 @@ It is identical to using `zodiase:mdc-styleless` and `zodiase:mdc-styleonly` at 
 
 If you need to use your own styling, use `zodiase:mdc-styleless` only. You may also find useful resources in `zodiase:mdc-sass`.
 
+**Requires Meteor@1.3.3+ (ecmascript@0.4.4+)**
+
 ## Install
 
 ```Bash

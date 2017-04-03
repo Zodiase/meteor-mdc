@@ -2,6 +2,8 @@
 
 This package only contains the js files so users can have their own styles.
 
+**Requires Meteor@1.3.3+ (ecmascript@0.4.4+)**
+
 ## Install
 
 ```Bash

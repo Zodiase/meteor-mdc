@@ -12,64 +12,198 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-// Import Tinytest from the tinytest Meteor package.
-import { Tinytest } from "meteor/tinytest";
+import {
+  before,
+  after,
+  beforeEach,
+  afterEach,
+  describe,
+  it
+} from "meteor/practicalmeteor:mocha";
+import {
+  expect
+} from "meteor/practicalmeteor:chai";
+
 import mdcNpmPkgCfg from "./material-components-web.json";
 
-Tinytest.add('zodiase:mdc-styleless - package name', function (test) {
+describe('zodiase:mdc-styleless', () => {
 
-  // Verify package name.
-  import { name } from "meteor/zodiase:mdc-styleless";
+  it('should have correct package name', () => {
 
-  test.equal(name, "zodiase:mdc-styleless");
+    import { name } from "meteor/zodiase:mdc-styleless";
 
-});
+    expect(name).to.equal("zodiase:mdc-styleless");
 
-Tinytest.add('zodiase:mdc-styleless - material-components-web package version', function (test) {
+  });
 
-  // The version of the `material-components-web` must match the intended mdc version.
-  import { mdcVersion } from "meteor/zodiase:mdc-styleless";
+  it('should have correct MDC version', () => {
 
-  test.equal(mdcVersion, mdcNpmPkgCfg.version);
+    import { mdcVersion } from "meteor/zodiase:mdc-styleless";
 
-});
+    expect(mdcVersion).to.equal(mdcNpmPkgCfg.version);
 
-Tinytest.add('zodiase:mdc-styleless - bundle export', function (test) {
+  });
 
-  // Verify package bundle.
-  import mdc from "meteor/zodiase:mdc-styleless";
+  it('should export an object', () => {
 
-  test.equal(typeof mdc, "object");
+    import mdc from "meteor/zodiase:mdc-styleless";
 
-});
+    expect(mdc).to.an('object');
 
-Tinytest.add('zodiase:mdc-styleless - component export', function (test) {
+  });
 
-  // Verify each component.
-  import {
-    base,
-    checkbox,
-    iconToggle,
-    radio,
-    ripple,
-    snackbar,
-    drawer,
-    textfield,
-    menu,
-    select,
-    autoInit
-  } from "meteor/zodiase:mdc-styleless";
+  describe('component:base', () => {
 
-  test.equal(typeof base, "object");
-  test.equal(typeof checkbox, "object");
-  test.equal(typeof iconToggle, "object");
-  test.equal(typeof radio, "object");
-  test.equal(typeof ripple, "object");
-  test.equal(typeof snackbar, "object");
-  test.equal(typeof drawer, "object");
-  test.equal(typeof textfield, "object");
-  test.equal(typeof menu, "object");
-  test.equal(typeof select, "object");
-  test.equal(typeof autoInit, "function");
+    import {
+      base
+    } from "meteor/zodiase:mdc-styleless";
+
+    it('should be an object', () => {
+
+      expect(base).to.an('object');
+
+    });
+
+  }); // component:base
+
+  describe('component:checkbox', () => {
+
+    import {
+      checkbox
+    } from "meteor/zodiase:mdc-styleless";
+
+    it('should be an object', () => {
+
+      expect(checkbox).to.an('object');
+
+    });
+
+  }); // component:checkbox
+
+  describe('component:iconToggle', () => {
+
+    import {
+      iconToggle
+    } from "meteor/zodiase:mdc-styleless";
+
+    it('should be an object', () => {
+
+      expect(iconToggle).to.an('object');
+
+    });
+
+  }); // component:iconToggle
+
+  describe('component:radio', () => {
+
+    import {
+      radio
+    } from "meteor/zodiase:mdc-styleless";
+
+    it('should be an object', () => {
+
+      expect(radio).to.an('object');
+
+    });
+
+  }); // component:radio
+
+  describe('component:ripple', () => {
+
+    import {
+      ripple
+    } from "meteor/zodiase:mdc-styleless";
+
+    it('should be an object', () => {
+
+      expect(ripple).to.an('object');
+
+    });
+
+  }); // component:ripple
+
+  describe('component:snackbar', () => {
+
+    import {
+      snackbar
+    } from "meteor/zodiase:mdc-styleless";
+
+    it('should be an object', () => {
+
+      expect(snackbar).to.an('object');
+
+    });
+
+  }); // component:snackbar
+
+  describe('component:drawer', () => {
+
+    import {
+      drawer
+    } from "meteor/zodiase:mdc-styleless";
+
+    it('should be an object', () => {
+
+      expect(drawer).to.an('object');
+
+    });
+
+  }); // component:drawer
+
+  describe('component:textfield', () => {
+
+    import {
+      textfield
+    } from "meteor/zodiase:mdc-styleless";
+
+    it('should be an object', () => {
+
+      expect(textfield).to.an('object');
+
+    });
+
+  }); // component:textfield
+
+  describe('component:menu', () => {
+
+    import {
+      menu
+    } from "meteor/zodiase:mdc-styleless";
+
+    it('should be an object', () => {
+
+      expect(menu).to.an('object');
+
+    });
+
+  }); // component:menu
+
+  describe('component:select', () => {
+
+    import {
+      select
+    } from "meteor/zodiase:mdc-styleless";
+
+    it('should be an object', () => {
+
+      expect(select).to.an('object');
+
+    });
+
+  }); // component:select
+
+  describe('component:autoInit', () => {
+
+    import {
+      autoInit
+    } from "meteor/zodiase:mdc-styleless";
+
+    it('should be a function', () => {
+
+      expect(autoInit).to.an('function');
+
+    });
+
+  }); // component:autoInit
 
 });

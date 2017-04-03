@@ -1,17 +1,20 @@
 {
   "name": "zodiase_mdc",
   "meteorPackageName": "zodiase:mdc",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "mdcVersion": "0.4.0",
-  "jsVersion": "0.0.3",
-  "cssVersion": "0.0.4",
-  "meteorRelease": "1.4.2.3",
+  "jsVersion": "0.0.6",
+  "cssVersion": "0.0.6",
   "description": "Material Components for Meteor",
   "git": "https://github.com/Zodiase/meteor-mdc.git",
+  "repository": "Zodiase/meteor-mdc",
   "main": "package.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "spacejam test-packages --driver-package=practicalmeteor:mocha-console-runner ./"
   },
   "author": "Xingchen Hong",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "spacejam": "^1.6.1"
+  }
 }

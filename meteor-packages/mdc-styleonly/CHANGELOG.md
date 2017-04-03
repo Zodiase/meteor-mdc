@@ -1,5 +1,10 @@
 Change Log
 ------------------------------------------------------------------------------
+* v0.0.6
+    * After testing, the earlest compatible Meteor release is 1.3.3.
+* v0.0.5
+    * Replace tinytest with Mocha+chai.
+    * Reduce Meteor dependency to 1.3.
 * v0.0.4
     * Fix the `Cannot find module './package.json'` issue.
 * v0.0.3

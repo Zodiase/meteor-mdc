@@ -33,9 +33,8 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom(config.meteorRelease);
-  api.use('ecmascript');
-  api.use('zodiase:build-json@=1.0.0');
+  api.use('ecmascript@0.4.4');
+  api.use('zodiase:build-json@=1.1.0');
 
   api.addAssets(["bundle.css"], 'client');
 
@@ -44,8 +43,7 @@ Package.onUse(function(api) {
 });
 
 Package.onTest(function(api) {
-  api.use('ecmascript');
-  api.use('tinytest');
+  api.use('ecmascript@0.4.4');
   api.use(config.meteorPackageName);
 
   api.mainModule('main-tests.js', 'client');

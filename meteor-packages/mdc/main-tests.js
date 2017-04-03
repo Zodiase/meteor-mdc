@@ -12,24 +12,36 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-// Import Tinytest from the tinytest Meteor package.
-import { Tinytest } from "meteor/tinytest";
+import {
+  before,
+  after,
+  beforeEach,
+  afterEach,
+  describe,
+  it
+} from "meteor/practicalmeteor:mocha";
+import {
+  expect
+} from "meteor/practicalmeteor:chai";
+
 import mdcNpmPkgCfg from "./material-components-web.json";
 
-Tinytest.add('zodiase:mdc - package name', function (test) {
+describe('zodiase:mdc', () => {
 
-  // Verify package name.
-  import { name } from "meteor/zodiase:mdc";
+  it('should have correct package name', () => {
 
-  test.equal(name, "zodiase:mdc");
+    import { name } from "meteor/zodiase:mdc";
 
-});
+    expect(name).to.equal("zodiase:mdc");
 
-Tinytest.add('zodiase:mdc - material-components-web package version', function (test) {
+  });
 
-  // The version of the `material-components-web` must match the intended mdc version.
-  import { mdcVersion } from "meteor/zodiase:mdc";
+  it('should have correct MDC version', () => {
 
-  test.equal(mdcVersion, mdcNpmPkgCfg.version);
+    import { mdcVersion } from "meteor/zodiase:mdc";
+
+    expect(mdcVersion).to.equal(mdcNpmPkgCfg.version);
+
+  });
 
 });
