@@ -38,7 +38,10 @@ var ROOT_DIR = path.join(__dirname, ".."),
 // Prepare a list of transformation pairs (source to destination).
 var files = glob.sync("**/*.scss", {
   cwd: MDC_COMPONENT_DIR,
-  root: ROOT_DIR
+  root: ROOT_DIR,
+  ignore: [
+    "**/node_modules/**"
+  ]
 })
 .map(function (filename) {
   return [

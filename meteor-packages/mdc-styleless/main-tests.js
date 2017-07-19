@@ -80,6 +80,62 @@ describe('zodiase:mdc-styleless', () => {
 
   }); // component:checkbox
 
+  describe('component:dialog', () => {
+
+    import {
+      dialog
+    } from "meteor/zodiase:mdc-styleless";
+
+    it('should be an object', () => {
+
+      expect(dialog).to.an('object');
+
+    });
+
+  }); // component:dialog
+
+  describe('component:drawer', () => {
+
+    import {
+      drawer
+    } from "meteor/zodiase:mdc-styleless";
+
+    it('should be an object', () => {
+
+      expect(drawer).to.an('object');
+
+    });
+
+  }); // component:drawer
+
+  describe('component:formField', () => {
+
+    import {
+      formField
+    } from "meteor/zodiase:mdc-styleless";
+
+    it('should be an object', () => {
+
+      expect(formField).to.an('object');
+
+    });
+
+  }); // component:formField
+
+  describe('component:gridList', () => {
+
+    import {
+      gridList
+    } from "meteor/zodiase:mdc-styleless";
+
+    it('should be an object', () => {
+
+      expect(gridList).to.an('object');
+
+    });
+
+  }); // component:gridList
+
   describe('component:iconToggle', () => {
 
     import {
@@ -93,6 +149,34 @@ describe('zodiase:mdc-styleless', () => {
     });
 
   }); // component:iconToggle
+
+  describe('component:linearProgress', () => {
+
+    import {
+      linearProgress
+    } from "meteor/zodiase:mdc-styleless";
+
+    it('should be an object', () => {
+
+      expect(linearProgress).to.an('object');
+
+    });
+
+  }); // component:linearProgress
+
+  describe('component:menu', () => {
+
+    import {
+      menu
+    } from "meteor/zodiase:mdc-styleless";
+
+    it('should be an object', () => {
+
+      expect(menu).to.an('object');
+
+    });
+
+  }); // component:menu
 
   describe('component:radio', () => {
 
@@ -122,6 +206,34 @@ describe('zodiase:mdc-styleless', () => {
 
   }); // component:ripple
 
+  describe('component:select', () => {
+
+    import {
+      select
+    } from "meteor/zodiase:mdc-styleless";
+
+    it('should be an object', () => {
+
+      expect(select).to.an('object');
+
+    });
+
+  }); // component:select
+
+  describe('component:slider', () => {
+
+    import {
+      slider
+    } from "meteor/zodiase:mdc-styleless";
+
+    it('should be an object', () => {
+
+      expect(slider).to.an('object');
+
+    });
+
+  }); // component:slider
+
   describe('component:snackbar', () => {
 
     import {
@@ -136,19 +248,19 @@ describe('zodiase:mdc-styleless', () => {
 
   }); // component:snackbar
 
-  describe('component:drawer', () => {
+  describe('component:tabs', () => {
 
     import {
-      drawer
+      tabs
     } from "meteor/zodiase:mdc-styleless";
 
     it('should be an object', () => {
 
-      expect(drawer).to.an('object');
+      expect(tabs).to.an('object');
 
     });
 
-  }); // component:drawer
+  }); // component:tabs
 
   describe('component:textfield', () => {
 
@@ -164,33 +276,19 @@ describe('zodiase:mdc-styleless', () => {
 
   }); // component:textfield
 
-  describe('component:menu', () => {
+  describe('component:toolbar', () => {
 
     import {
-      menu
+      toolbar
     } from "meteor/zodiase:mdc-styleless";
 
     it('should be an object', () => {
 
-      expect(menu).to.an('object');
+      expect(toolbar).to.an('object');
 
     });
 
-  }); // component:menu
-
-  describe('component:select', () => {
-
-    import {
-      select
-    } from "meteor/zodiase:mdc-styleless";
-
-    it('should be an object', () => {
-
-      expect(select).to.an('object');
-
-    });
-
-  }); // component:select
+  }); // component:toolbar
 
   describe('component:autoInit', () => {
 

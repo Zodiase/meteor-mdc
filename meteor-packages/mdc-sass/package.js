@@ -33,9 +33,8 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom(config.meteorRelease);
-  api.use('ecmascript');
-  api.use('zodiase:build-json@=1.0.0');
+  api.use('ecmascript@0.4.4');
+  api.use('zodiase:build-json@=1.1.0');
   api.use('fourseven:scss@' + config.scssVersion);
 
   // Add sass files to be imported by users.
@@ -47,8 +46,7 @@ Package.onUse(function(api) {
 });
 
 Package.onTest(function(api) {
-  api.use('ecmascript');
-  api.use('tinytest');
+  api.use('ecmascript@0.4.4');
   // Use the SCSS package to enable importing SASS files.
   api.use('fourseven:scss@' + config.scssVersion);
   api.use(config.meteorPackageName);

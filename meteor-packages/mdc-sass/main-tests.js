@@ -12,31 +12,47 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-// Import Tinytest from the tinytest Meteor package.
-import { Tinytest } from "meteor/tinytest";
+import {
+  before,
+  after,
+  beforeEach,
+  afterEach,
+  describe,
+  it
+} from "meteor/practicalmeteor:mocha";
+import {
+  expect
+} from "meteor/practicalmeteor:chai";
+
 import mdcNpmPkgCfg from "./material-components-web.json";
 
-Tinytest.add('zodiase:mdc-sass - package name', function (test) {
+describe('zodiase:mdc-styleonly', () => {
 
-  // Verify package name.
-  import { name } from "meteor/zodiase:mdc-sass";
+  it('should have correct package name', () => {
 
-  test.equal(name, "zodiase:mdc-sass");
+    import { name } from "meteor/zodiase:mdc-sass";
 
-});
+    expect(name).to.equal("zodiase:mdc-sass");
 
-Tinytest.add('zodiase:mdc-sass - material-components-web package version', function (test) {
+  });
 
-  // The version of the `material-components-web` must match the intended mdc version.
-  import { mdcVersion } from "meteor/zodiase:mdc-sass";
+  it('should have correct MDC version', () => {
 
-  test.equal(mdcVersion, mdcNpmPkgCfg.version);
+    import { mdcVersion } from "meteor/zodiase:mdc-sass";
 
-});
+    expect(mdcVersion).to.equal(mdcNpmPkgCfg.version);
 
-Tinytest.add('zodiase:mdc-sass - importing SASS bundle', function (test) {
+  });
 
-  // Importing the bundle shouldn't cause any errors.
-  import './bundle.scss';
+  describe('SCSS', () => {
+
+    it('should load properly', () => {
+
+      // Importing the bundle shouldn't cause any errors.
+      import './bundle.scss';
+
+    });
+
+  });
 
 });

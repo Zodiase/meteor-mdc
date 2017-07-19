@@ -1,5 +1,7 @@
 Change Log
 ------------------------------------------------------------------------------
+* v0.0.7
+    * Update to MDC 0.15.0.
 * v0.0.6
     * After testing, the earlest compatible Meteor release is 1.3.3.
 * v0.0.5

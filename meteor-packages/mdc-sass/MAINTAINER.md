@@ -1,5 +1,6 @@
 ## Update Material Components Version
 
-Since this package simply uses the symlinked js file (`bundle.js`), there is nothing more than updating the package version in `package.json`.
-
-Don't forget to update the change logs.
+1. Make sure `/meteor-packages/mdc-sass/package.mdcVersion` matches `/package.dependencies.material-components-web`.
+2. Bump `/meteor-packages/mdc-sass/package.version` as needed.
+3. Run `/scripts/setup-sass.js` to update the SCSS files.
+4. Update and run tests.

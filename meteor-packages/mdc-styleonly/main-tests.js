@@ -70,7 +70,7 @@ describe('zodiase:mdc-styleonly', () => {
 
       const style = window.getComputedStyle(buttonElement);
 
-      expect(style.getPropertyValue('font-family')).to.not.equal('Roboto, sans-serif');
+      expect(style.getPropertyValue('text-transform')).to.not.equal('uppercase');
 
     });
 
@@ -84,7 +84,7 @@ describe('zodiase:mdc-styleonly', () => {
 
       const style = window.getComputedStyle(buttonElement);
 
-      expect(style.getPropertyValue('font-family')).to.equal('Roboto, sans-serif');
+      expect(style.getPropertyValue('text-transform')).to.equal('uppercase');
 
     });
 

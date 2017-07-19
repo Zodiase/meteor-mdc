@@ -1,5 +1,8 @@
 Change Log
 ------------------------------------------------------------------------------
+* v0.0.6
+    * Uses `zodiase:mdc-styleless@0.0.7`.
+    * Uses `zodiase:mdc-styleonly@0.0.7`.
 * v0.0.5
     * Replace tinytest with Mocha+chai.
     * Reduce Meteor dependency to 1.3.3.

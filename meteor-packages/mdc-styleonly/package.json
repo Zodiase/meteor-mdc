@@ -1,8 +1,8 @@
 {
   "name": "zodiase_mdc-styleonly",
   "meteorPackageName": "zodiase:mdc-styleonly",
-  "version": "0.0.6",
-  "mdcVersion": "0.4.0",
+  "version": "0.0.7",
+  "mdcVersion": "0.15.0",
   "description": "Material Components for Meteor (stylesheet only)",
   "git": "https://github.com/Zodiase/meteor-mdc.git",
   "repository": "Zodiase/meteor-mdc",
