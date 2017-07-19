@@ -1,5 +1,7 @@
 # Material Components for Meteor
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Zodiase/meteor-mdc.svg)](https://greenkeeper.io/)
+
 This repository contains multiple packages that serve differenct purposes:
 
 - `meteor-packages/mdc-styleless` provides only the bundled JS file for all components.
