@@ -38,5 +38,5 @@ module.exports = (pkgName) => {
     `Update to MDC ${ROOT_MDC_VERSION}.`
   ]);
 
-  console.log("MDC version updated.");
+  console.log(`Package MDC version updated to ${ROOT_MDC_VERSION}.`);
 };
