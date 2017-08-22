@@ -3,7 +3,6 @@
   "meteorPackageName": "zodiase:mdc-sass",
   "version": "0.0.1",
   "mdcVersion": "0.15.0",
-  "meteorRelease": "1.4.2.3",
   "scssVersion": "4.5.4",
   "_pkgfiles": [
     "CHANGELOG.md",
