@@ -1,11 +1,13 @@
 const fs = require("fs"),
       path = require("path"),
-      semver = require('semver'),
+      semver = require("semver"),
       addToChangeLog = require("./_addToChangeLog");
 
-const ROOT_DIR = require("./_rootDir"),
-      ROOT_MDC_VERSION = require("./_rootMdcVersion"),
-      INSTALLED_MDC_VERSION = require("./_installedMdcVersion");
+const {
+        ROOT_DIR,
+        ROOT_MDC_VERSION,
+        MDC_WEB_VERSION,
+      } = require("./_getConsts")();
 
 /**
  * Updates the MDC version of the specified package to match the one in root.
@@ -15,14 +17,14 @@ const ROOT_DIR = require("./_rootDir"),
 module.exports = (pkgName) => {
   console.log(`Root MDC version:      ${ROOT_MDC_VERSION}`);
 
-  if (semver.lt(INSTALLED_MDC_VERSION, ROOT_MDC_VERSION)) {
-    console.error(`Installed MDC version: ${INSTALLED_MDC_VERSION} \u2717`);
+  if (semver.lt(MDC_WEB_VERSION, ROOT_MDC_VERSION)) {
+    console.error(`Installed MDC version: ${MDC_WEB_VERSION} \u2717`);
     throw new Error("Please update the installed MDC.");
-  } else if (!semver.eq(INSTALLED_MDC_VERSION, ROOT_MDC_VERSION)) {
-    console.error(`Installed MDC version: ${INSTALLED_MDC_VERSION} \u2717`);
+  } else if (!semver.eq(MDC_WEB_VERSION, ROOT_MDC_VERSION)) {
+    console.error(`Installed MDC version: ${MDC_WEB_VERSION} \u2717`);
     throw new Error("Please match the version of the installed MDC to the one expected by root.");
   } else {
-    console.log(`Installed MDC version: ${INSTALLED_MDC_VERSION} \u2713`);
+    console.log(`Installed MDC version: ${MDC_WEB_VERSION} \u2713`);
   }
 
   const meteorPackageDir = path.join(ROOT_DIR, "meteor-packages", pkgName),

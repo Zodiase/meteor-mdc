@@ -1,30 +1,36 @@
 #!/usr/bin/env ../node_modules/.bin/babel-node
 
+const fs = require("fs"),
+      path = require("path"),
+      async = require("async"),
+      glob = require("glob"),
+      rimraf = require("rimraf"),
+      mkdirp = require("mkdirp"),
+      replaceStream = require("replacestream"),
+      matchMdcVersion = require("./_matchMdcVersion"),
+      {
+        readPackageConfig,
+        writePackageConfig,
+      } = require("./_packageConfigOperations");
+
 // Since there are some async steps, the entire process is wrapped in async.
 (async () => {
-
-  const matchMdcVersion = require("./_matchMdcVersion");
-
   // If no updates were performed, do nothing.
   if (!matchMdcVersion("mdc-sass")) {
     console.log("No need to perform further updates.");
     return;
   }
 
-  const fs = require("fs"),
-        path = require("path"),
-        async = require("async"),
-        glob = require("glob"),
-        rimraf = require("rimraf"),
-        mkdirp = require("mkdirp"),
-        replaceStream = require("replacestream");
+  console.log("Updating SASS files...");
 
-  const ROOT_DIR = path.join(__dirname, ".."),
-        MDC_COMPONENT_DIR = path.join(ROOT_DIR, "node_modules/@material"),
-        MDC_WEB_DIR = path.join(ROOT_DIR, "node_modules/material-components-web"),
+  const {
+          ROOT_DIR,
+          MDC_WEB_DIR,
+          MDC_WEB_VERSION,
+          MDC_COMPONENT_DIR,
+        } = require("./_getConsts")(),
         MDC_METEOR_PKG_DIR = path.join(ROOT_DIR, "meteor-packages/mdc-sass"),
-        MDC_METEOR_PKG_FILE = path.join(MDC_METEOR_PKG_DIR, "package.json"),
-        MDC_METEOR_PKG_DOC = require(MDC_METEOR_PKG_FILE);
+        MDC_METEOR_PKG_DOC = readPackageConfig(MDC_METEOR_PKG_DIR);
 
   // Clean up the meteor package directory.
   {
@@ -84,7 +90,7 @@
   };
 
   // Save the file list.
-  const docString = JSON.stringify(meteorPackageDocument, null, 2);
-  fs.writeFileSync(MDC_METEOR_PKG_FILE, docString, "utf8");
+  writePackageConfig(MDC_METEOR_PKG_DIR, meteorPackageDocument);
 
+  console.log("Updating SASS files...");
 })();
