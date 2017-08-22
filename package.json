@@ -28,6 +28,7 @@
     "lodash": "^4.17.4",
     "mkdirp": "^0.5.1",
     "replacestream": "^4.0.2",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "semver": "^5.4.1"
   }
 }
