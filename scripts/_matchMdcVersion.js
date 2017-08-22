@@ -5,10 +5,14 @@ const fs = require("fs"),
 const ROOT_DIR = require("./_rootDir"),
       ROOT_MDC_VERSION = require("./_rootMdcVersion");
 
+/**
+ * Updates the MDC version of the specified package to match the one in root.
+ * @param  {string} pkgName Name of the package.
+ * @return {boolean}        Whether the update is performed.
+ */
 module.exports = (pkgName) => {
   if (!ROOT_MDC_VERSION) {
-    console.log("Unsupported version format in root package config.");
-    return;
+    throw new Error("Unable to get MDC version from root package config.");
   }
 
   const meteorPackageDir = path.join(ROOT_DIR, "meteor-packages", pkgName),
@@ -21,7 +25,7 @@ module.exports = (pkgName) => {
 
   if (meteorPackageMdcVersion === ROOT_MDC_VERSION) {
     console.log("Identical version. No need to update.");
-    return;
+    return false;
   }
 
   // Update MDC version.
@@ -39,4 +43,5 @@ module.exports = (pkgName) => {
   ]);
 
   console.log(`Package MDC version updated to ${ROOT_MDC_VERSION}.`);
+  return true;
 };
