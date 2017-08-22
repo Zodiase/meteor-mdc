@@ -11,6 +11,7 @@
     "main.js",
     "MAINTAINER.md",
     "material-components-web.json",
+    "package-lock.json",
     "package.js",
     "package.json",
     "README.md"
