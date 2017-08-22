@@ -18,5 +18,4 @@ export * from "meteor/zodiase:mdc-styleless";
 export {
   meteorPackageName as name,
   version,
-  mdcVersion
 } from './package.json';
