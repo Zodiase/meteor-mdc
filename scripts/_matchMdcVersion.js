@@ -36,7 +36,7 @@ module.exports = (pkgName) => {
     return false;
   } else {
     console.log(`Package MDC version:   ${meteorPackageMdcVersion} \u2717`);
-    console.log("Updating...");
+    console.log("Updating package MDC version...");
   }
 
   // Update MDC version.
