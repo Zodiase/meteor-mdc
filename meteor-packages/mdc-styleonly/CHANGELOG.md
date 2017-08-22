@@ -1,6 +1,11 @@
 Change Log
 ------------------------------------------------------------------------------
 * vNEXT
+* v0.0.10
+	* Re-publishing as the previous publishing (v0.0.9) failed.
+* v0.0.9
+	* Re-publishing as the previous publishing (v0.0.8) failed.
+* v0.0.8
     * Update to MDC 0.18.0.
 * v0.0.7
     * Update to MDC 0.15.0.
