@@ -1,5 +1,3 @@
-#!/usr/bin/env ../node_modules/.bin/babel-node
-
 const fs = require("fs"),
       path = require("path"),
       async = require("async"),
@@ -21,7 +19,7 @@ const fs = require("fs"),
     return;
   }
 
-  console.log("Updating SASS files...");
+  console.log("Updating SASS resources...");
 
   const {
           ROOT_DIR,
@@ -92,5 +90,5 @@ const fs = require("fs"),
   // Save the file list.
   writePackageConfig(MDC_METEOR_PKG_DIR, meteorPackageDocument);
 
-  console.log("Updating SASS files...");
+  console.log("SASS resources updated.");
 })();

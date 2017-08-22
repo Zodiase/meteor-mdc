@@ -4,6 +4,9 @@
   "description": "Wrapper Npm package. Do not publish.",
   "main": "index.js",
   "scripts": {
+    "update-sass": "babel-node scripts/update--mdc-sass.js",
+    "update-styleless": "babel-node scripts/update--mdc-styleless.js",
+    "update-styleonly": "babel-node scripts/update--mdc-styleonly.js",
     "test-bundle": "cd meteor-packages && (cd mdc && npm install && npm test)",
     "test-styleless": "cd meteor-packages && (cd mdc-styleless && npm install && npm test)",
     "test-styleonly": "cd meteor-packages && (cd mdc-styleonly && npm install && npm test)",
