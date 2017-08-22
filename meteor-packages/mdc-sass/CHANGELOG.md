@@ -1,5 +1,15 @@
 Change Log
 ------------------------------------------------------------------------------
+* vNEXT
+    * Update to MDC 0.18.0.
+    * Still not working.
+        ```
+        => Errors prevented startup:
+           
+           While building for web.browser:
+           /packages/local-test_zodiase_mdc-sass/bundle.scss: Scss compiler error:
+           Undefined variable: "$mdc-typography-styles".
+        ```
 * v0.0.1
     * Update to MDC 0.15.0.
     * Still not working.

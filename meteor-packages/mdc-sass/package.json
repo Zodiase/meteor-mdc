@@ -2,8 +2,7 @@
   "name": "zodiase_mdc-sass",
   "meteorPackageName": "zodiase:mdc-sass",
   "version": "0.0.1",
-  "mdcVersion": "0.15.0",
-  "meteorRelease": "1.4.2.3",
+  "mdcVersion": "0.18.0",
   "scssVersion": "4.5.4",
   "_pkgfiles": [
     "CHANGELOG.md",
@@ -12,6 +11,7 @@
     "main.js",
     "MAINTAINER.md",
     "material-components-web.json",
+    "package-lock.json",
     "package.js",
     "package.json",
     "README.md"
@@ -67,6 +67,7 @@
     "tabs/tab-bar/mdc-tab-bar.scss",
     "tabs/tab/mdc-tab.scss",
     "textfield/mdc-textfield.scss",
+    "theme/_color_palette.scss",
     "theme/_constants.scss",
     "theme/_functions.scss",
     "theme/_mixins.scss",

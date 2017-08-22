@@ -36,31 +36,20 @@ describe('zodiase:mdc', () => {
 
   });
 
-  it('should have correct MDC version', () => {
-
-    import { mdcVersion } from "meteor/zodiase:mdc";
-
-    expect(mdcVersion).to.equal(mdcNpmPkgCfg.version);
-
-  });
-
   it('should load both mdc-styleless and mdc-styleonly with matching MDC versions', () => {
 
     import {
       name as name_styleless,
       mdcVersion as mdcVersion_styleless
     } from "meteor/zodiase:mdc-styleless";
-
-    expect(name_styleless).to.equal("zodiase:mdc-styleless");
-    expect(mdcVersion_styleless).to.equal(mdcNpmPkgCfg.version);
-
     import {
       name as name_styleonly,
       mdcVersion as mdcVersion_styleonly
     } from "meteor/zodiase:mdc-styleonly";
 
+    expect(name_styleless).to.equal("zodiase:mdc-styleless");
     expect(name_styleonly).to.equal("zodiase:mdc-styleonly");
-    expect(mdcVersion_styleonly).to.equal(mdcNpmPkgCfg.version);
+    expect(mdcVersion_styleless).to.equal(mdcVersion_styleonly);
 
   });
 
