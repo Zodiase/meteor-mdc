@@ -13,7 +13,7 @@ const ROOT_DIR = require("./_rootDir"),
           return semver.clean(tail);
         } else {
           // Unsupported stuff.
-          return null;
+          throw new Error("Unable to parse the MDC version in the root package config.");
         }
       })(ROOT_MDC_VERSION_RAW);
 
