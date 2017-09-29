@@ -15,5 +15,8 @@
 export {
   meteorPackageName as name,
   version,
-  mdcVersion
 } from './package.json';
+
+export {
+  version as mdcVersion,
+} from './material-components-web.json';
