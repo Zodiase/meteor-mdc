@@ -2,7 +2,6 @@
   "name": "zodiase_mdc-styleless",
   "meteorPackageName": "zodiase:mdc-styleless",
   "version": "0.0.8",
-  "mdcVersion": "0.18.0",
   "description": "Material Components for Meteor (without style)",
   "git": "https://github.com/Zodiase/meteor-mdc.git",
   "repository": "Zodiase/meteor-mdc",

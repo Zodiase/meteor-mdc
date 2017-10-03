@@ -1,6 +1,7 @@
 Change Log
 ------------------------------------------------------------------------------
 * vNEXT
+    * Update material-components-web to version 0.21.1.
 * v0.0.8
     * Update to MDC 0.18.0.
 * v0.0.7
