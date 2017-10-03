@@ -1,6 +1,7 @@
 Change Log
 ------------------------------------------------------------------------------
 * vNEXT
+* v0.0.11
     * Update material-components-web to version 0.21.1.
 * v0.0.10
     * Re-publishing as the previous publishing (v0.0.9) failed.
