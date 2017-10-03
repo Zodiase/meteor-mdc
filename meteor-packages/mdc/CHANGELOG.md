@@ -1,6 +1,9 @@
 Change Log
 ------------------------------------------------------------------------------
 * vNEXT
+* v0.0.8
+    * Uses `zodiase:mdc-styleless@0.0.9`.
+    * Uses `zodiase:mdc-styleonly@0.0.11`.
 * v0.0.7
     * Uses `zodiase:mdc-styleless@0.0.8`.
     * Uses `zodiase:mdc-styleonly@0.0.10`.
