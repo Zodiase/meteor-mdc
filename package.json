@@ -9,8 +9,8 @@
     "update-styleonly": "babel-node scripts/update--mdc-styleonly.js",
     "test-bundle": "cd meteor-packages && (cd mdc && npm install && npm test)",
     "test-sass": "cd meteor-packages && (cd mdc-sass && npm install && npm test)",
-    "test-styleless": "cd meteor-packages && (cd mdc-styleless && npm install && npm test)",
-    "test-styleonly": "cd meteor-packages && (cd mdc-styleonly && npm install && npm test)",
+    "test-styleless": "babel-node scripts/update--mdc-styleless && (cd meteor-packages/mdc-styleless && npm install && npm test)",
+    "test-styleonly": "babel-node scripts/update--mdc-styleonly && (cd meteor-packages/mdc-styleonly && npm install && npm test)",
     "test": "npm run test-styleless && npm run test-styleonly && npm run test-bundle"
   },
   "repository": {
@@ -24,12 +24,13 @@
   },
   "homepage": "https://github.com/Zodiase/meteor-mdc#readme",
   "dependencies": {
-    "material-components-web": "^0.21.1"
+    "material-components-web": "^0.22.0"
   },
   "devDependencies": {
     "async": "^2.5.0",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
     "glob": "^7.1.2",
     "lodash": "^4.17.4",
     "mkdirp": "^0.5.1",
