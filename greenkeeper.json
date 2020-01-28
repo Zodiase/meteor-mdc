@@ -1,0 +1,13 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "meteor-packages/mdc-sass/package.json",
+        "meteor-packages/mdc-styleless/package.json",
+        "meteor-packages/mdc-styleonly/package.json",
+        "meteor-packages/mdc/package.json",
+        "package.json"
+      ]
+    }
+  }
+}
