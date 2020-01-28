@@ -24,18 +24,18 @@
   },
   "homepage": "https://github.com/Zodiase/meteor-mdc#readme",
   "dependencies": {
-    "material-components-web": "^0.22.0"
+    "material-components-web": "^4.0.0"
   },
   "devDependencies": {
-    "async": "^2.5.0",
+    "async": "^3.1.1",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "glob": "^7.1.2",
     "lodash": "^4.17.4",
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^1.0.3",
     "replacestream": "^4.0.2",
-    "rimraf": "^2.6.1",
-    "semver": "^5.4.1"
+    "rimraf": "^3.0.1",
+    "semver": "^7.1.1"
   }
 }
